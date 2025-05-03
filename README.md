@@ -57,7 +57,7 @@ Required data files:
 | seaborn           | ≥ 0.13         |
 | geopandas         | ≥ 0.14         |
 
-Install all dependencies in one step:
+Install everything in one step:
 
 ```bash
 pip install numpy pandas scikit-learn xgboost imbalanced-learn matplotlib seaborn geopandas
