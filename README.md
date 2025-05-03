@@ -1,57 +1,21 @@
 # DonorsChoose Project Risk Model
 
-This project helps identify which classroom projects on DonorsChoose are least likely to get funded, so that a content expert can review them and improve their chances.
 Dataset: https://www.kaggle.com/c/kdd-cup-2014-predicting-excitement-at-donors-choose/data 
+
+This project supports DonorsChoose.org, a crowdfunding platform for public school teachers in the United States, by predicting which classroom projects are most at risk of not being fully funded before they expire. The platform currently relies on a digital content expert who can manually review only a small fraction of daily submissions, approximately ten percent. Our objective is to develop a predictive model that ranks projects by their likelihood of going unfunded, thereby helping allocate expert attention where it is most urgently needed.
+   The analysis is based on data from the DonorsChoose 2014 KDD Cup, which includes structured, semi-structured, and unstructured features such as project costs, subject categories, grade levels, school-level poverty indicators, and essay content written by teachers. After merging, cleaning, and engineering features, we trained and evaluated three classification models: logistic regression, random forest, and XGBoost.
+   Among the three, XGBoost achieved the strongest performance, with an area under the ROC curve of 0.69 and an F1 score of 0.79. It also demonstrated strong precision among the top ten percent of highest-risk predictions, which corresponds to the platform’s expert review capacity. Important predictive features included total project cost, resource quantity, and teacher experience on the platform.
+   We recommend integrating this model into DonorsChoose’s project submission system to automatically identify high-risk proposals for review. This targeted intervention approach can help improve funding success rates, optimize limited human resources, and support more equitable educational opportunities.
+
 
 ---
 
-## Files
+## Code
 
 - `MLF_project.ipynb` – The main Jupyter Notebook for data analysis and modeling.
-- `projects.csv`, `outcomes.csv`, `essays.csv`, `resources.csv`, `donations.csv` – Input datasets.
-- `at_risk_projects.csv` – Output file listing the bottom 10% of projects least likely to be funded.
+
+## Datasets
+- `datasets.zip`: `projects.csv`, `outcomes.csv`, `essays.csv`, `resources.csv`, `donations.csv` – Input datasets in zipped file 
 - `README.md` – This file with instructions and explanation.
 
 ---
-
-## Steps for running the project
-
-### Step 1: Clone or Download
-
-Go to your GitHub repo and either:
-
-- Click **Code > Download ZIP**, or  
-- Run this in your terminal:
-
-```bash
-git clone https://github.com/1112hass/your-repo-name.git
-cd your-repo-name
-```
-
-### Step 2: Install Python Packages
-
-Make sure Python 3.x is installed, then install required libraries:
-
-```bash
-pip install pandas numpy matplotlib seaborn geopandas scikit-learn textblob
-python -m textblob.download_corpora
-```
-
-### Step 3: Launch Notebook
-
-```bash
-jupyter notebook
-```
-
-Open `MLF_project.ipynb` and run all cells.
-
----
-
-## What This Does
-
-- Loads and merges project, essay, donation, and resource data
-- Adds sentiment and text features from project essays
-- Visualizes geographic and numeric data
-- Trains a model to predict funding success
-- Outputs a CSV with at-risk projects needing expert review
-
