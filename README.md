@@ -55,9 +55,3 @@ Open `MLF_project.ipynb` and run all cells.
 - Trains a model to predict funding success
 - Outputs a CSV with at-risk projects needing expert review
 
----
-
-## Notes
-
-- `at_risk_projects.csv` contains the bottom 10% of projects most likely to fail (based on predicted probability).
-- These are the projects suggested for expert attention.
