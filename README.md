@@ -61,4 +61,32 @@ Install everything in one step:
 
 ```bash
 pip install numpy pandas scikit-learn xgboost imbalanced-learn matplotlib seaborn geopandas
+```
+## Running the Notebook
+
+1. **Clone the repo**
+
+    ```bash
+    git clone https://github.com/1112hass/donor_ml.git
+    ```
+
+2. **Add the raw data**  
+   Download the five CSVs (`projects.csv`, `outcomes.csv`, `essays.csv`, `resources.csv`, `donations.csv`) from the Google Drive link and place them in same directory as the project root.
+
+3. **Launch Jupyter**
+
+    ```bash
+    jupyter notebook MLF_project.ipynb
+    ```
+
+    *(JupyterLab, VS Code, or any other Notebook front-end works just as well.)*
+
+4. **Run all cells**  
+   The notebook will
+
+   - merge & clean the tables  
+   - engineer features  
+   - train logistic regression, random-forest, and XGBoost models  
+   - print ROC/F1 metrics and show supporting plots.
+
 
