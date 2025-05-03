@@ -15,7 +15,7 @@ This project supports DonorsChoose.org, a crowdfunding platform for public schoo
 - `MLF_project.ipynb` – The main Jupyter Notebook for data analysis and modeling.
 
 ## Datasets
-- `datasets.zip`: `projects.csv`, `outcomes.csv`, `essays.csv`, `resources.csv`, `donations.csv` – Input datasets in zipped file 
-- `README.md` – This file with instructions and explanation.
+- Dataset too large to push to github, rather visit ("https://drive.google.com/drive/folders/1USin0LLD1-w-SvOrU_2CohF_1_BxYk1U?usp=sharing")
+- `datasets`: `projects.csv`, `outcomes.csv`, `essays.csv`, `resources.csv`, `donations.csv`
 
 ---
